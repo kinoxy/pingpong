@@ -1,0 +1,26 @@
+Event			Attribute
+------------------	------------------		----------------------------------
+client2server		command	: joinGame,		client server'a gönderir.   		
+			name 	: playerName
+
+client2server		command	: disconnectGame	client server'a gönderir.
+
+client2server		command	: disconnectServer	client server'a gönderir.
+
+client2server		command	: sendCoord,		client pozisyon bilgilerini gönderir.
+			coord 	: (x,y),
+			isHitBall: boolean,		raket topa vurduysa topun yeni yönü mesaj ile birlikte iletilir.
+			ballCoord : (x,y)
+
+client2server		command : setScore,		client sayý olduðunda skor bilgisini server'a gönderir.
+			score 	: opponent_score
+
+server2client		command : getCoord,		server client'e karþý oyuncunun pozisyon bilgilerini gönderir.
+			coord 	: (x,y),
+			ballCoord : (x,y)
+			
+server2client		command : getScore,		server client'e karþý oyuncunun skor bilgisini gönderir.
+			coord 	: (x,y),
+			ballCoord : (x,y)			
+			 
+server2client		command	: disconnected		server client'e karþý oyuncu oyundan çýktýðý bilgisini gönderir.
